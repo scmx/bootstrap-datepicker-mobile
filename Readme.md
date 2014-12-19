@@ -6,6 +6,18 @@
 
 > An add-on for <https://github.com/eternicode/bootstrap-datepicker> to add responsive support for mobile devices with consideration for native `input[type=date]` support using [Modernizr][modernizr] and [Moment.js][momentjs].
 
+## Index
+
+* [Demo](#demo)
+* [Requirements](#requirements)
+* [Install](#install)
+* [Usage](#usage)
+* [How does it work?](#how-does-it-work)
+* [Tips](#tips)
+* [Notes](#notes)
+* [Contributors](#contributors)
+* [License](#license)
+
 
 ## Demo
 
@@ -16,7 +28,7 @@ Try resizing your browser window, loading this on a mobile device, and comparing
 
 ## Requirements
 
-You must have the following scripts and stylesheets in the `<head>` tag of your HTML layout (adjusts paths accordingly)
+You must have the following scripts and stylesheets in the `<head>` tag of your HTML layout (please adjust paths accordingly):
 
 ```html
 <html>
@@ -30,7 +42,7 @@ You must have the following scripts and stylesheets in the `<head>` tag of your 
 </html>
 ```
 
-You must have the following before the closing `</body>` tag of your HTML layout (note your paths may be different, e.g. if you installed with Bower):
+You must have the following before the closing `</body>` tag of your HTML layout (please adjust paths accordingly):
 
 ```html
   <!-- ... -->
@@ -61,7 +73,7 @@ bower install -S bootstrap-datepicker-mobile
 <script src="/bower/bootstrap-datepicker-mobile/bootstrap-datepicker-mobile.js"></script>
 ```
 
-3. See [usage][#usage] below.
+3. See [usage](#usage) below.
 
 ### RawGit
 
@@ -71,18 +83,49 @@ bower install -S bootstrap-datepicker-mobile
 <script src="//cdn.rawgit.com/niftylettuce/bootstrap-datepicker-mobile/master/bootstrap-datepicker-mobile.js"></script>
 ```
 
-2. See [usage][#usage] below.
+2. See [usage](#usage) below.
 
 
 ## Usage
 
 ### Client-side
 
-To integrate this add-on, simply follow these three rules and [use the example][#example] as a guide:
+To integrate this add-on, simply follow these three rules and [use the example](#example) as a guide:
 
 1. Never use the data attribute of `data-provide="datepicker"` on date inputs.
 2. Always add the class of `date-picker` on date inputs to activate this add-on for the input.
 3. Render dates formatted as `MM/DD/YY` for default `input` values (e.g. `<input value="02/01/99" />`).
+
+#### Example
+
+Here is an example of how to use this add-on for a "birthday" field with Bootstrap v3 and [Font Awesome][font-awesome]:
+
+```html
+<form action="/save-birthday" method="POST">
+  <div class="form-group">
+    <div class="input-group">
+
+      <div class="input-group-addon">
+        <i class="fa fa-calendar"></i>
+      </div>
+
+      <!-- this is where the magic happens -->
+      <input type="text" class="date-picker form-control" data-date-start-view="decade" data-date-format="mm/dd/yy" data-date="02/01/99" value="02/01/99" name="birthday" placeholder="MM/DD/YY" />
+
+    </div>
+  </div>
+</form>
+```
+
+This is how it looks when rendered with the add-on:
+
+Browser (unfocused): TODO
+
+Browser (focused): TODO
+
+Mobile Browser (unfocused): TODO
+
+Mobile Browser (focused): TODO
 
 ### Server-side
 
@@ -120,38 +163,6 @@ app.post('/save-birthday', function(req, res, next) {
 
 });
 ```
-
-
-## Example
-
-Here is an example of how to use this add-on for a "birthday" field with Bootstrap v3 and [Font Awesome][font-awesome]:
-
-```html
-<form action="/save-birthday" method="POST">
-  <div class="form-group">
-    <div class="input-group">
-
-      <div class="input-group-addon">
-        <i class="fa fa-calendar"></i>
-      </div>
-
-      <!-- this is where the magic happens -->
-      <input type="text" class="date-picker form-control" data-date-start-view="decade" data-date-format="mm/dd/yy" data-date="02/01/99" value="02/01/99" name="birthday" placeholder="MM/DD/YY" />
-
-    </div>
-  </div>
-</form>
-```
-
-This is how it looks when rendered with the add-on:
-
-Browser (unfocused): TODO
-
-Browser (focused): TODO
-
-Mobile Browser (unfocused): TODO
-
-Mobile Browser (focused): TODO
 
 
 ## How does it work?
@@ -207,6 +218,8 @@ This project also supports the native [RFC 3339][rfc-3339] format of `YYYY-MM-DD
 [MIT][license-url]
 
 
+[bower]: http://bower.io
+[rawgit]: http://rawgit.com
 [bootstrap-datepicker]: https://github.com/eternicode/bootstrap-datepicker
 [momentjs]: http://momentjs.com
 [modernizr]: http://modernizr.com
@@ -216,5 +229,5 @@ This project also supports the native [RFC 3339][rfc-3339] format of `YYYY-MM-DD
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE
 [gratipay-image]: https://img.shields.io/gratipay/niftylettuce.svg?style=flat
-[gratipay-url]: https://gratipay.com/niftylettuce/
+[gratipay-url]: https://gratipay.com/niftylettuce
 [nodejs]: http://nodejs.org
