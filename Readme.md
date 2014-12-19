@@ -62,16 +62,16 @@ We recommend that you install into your project using [Bower][bower], but you ca
 ### Bower
 
 1. Install with Bower:
-
-```bash
-bower install -S bootstrap-datepicker-mobile
-```
-
+  
+  ```bash
+  bower install -S bootstrap-datepicker-mobile
+  ```
+  
 2. Include the script in your HTML layout:
 
-```html
-<script src="/bower/bootstrap-datepicker-mobile/bootstrap-datepicker-mobile.js"></script>
-```
+  ```html
+  <script src="/bower/bootstrap-datepicker-mobile/bootstrap-datepicker-mobile.js"></script>
+  ```
 
 3. See [usage](#usage) below.
 
@@ -79,9 +79,9 @@ bower install -S bootstrap-datepicker-mobile
 
 1. Include the script in your HTML layout:
 
-```html
-<script src="//cdn.rawgit.com/niftylettuce/bootstrap-datepicker-mobile/master/bootstrap-datepicker-mobile.js"></script>
-```
+  ```html
+  <script src="//cdn.rawgit.com/niftylettuce/bootstrap-datepicker-mobile/master/bootstrap-datepicker-mobile.js"></script>
+  ```
 
 2. See [usage](#usage) below.
 
