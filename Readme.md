@@ -34,8 +34,8 @@ You must have the following scripts and stylesheets in the `<head>` tag of your 
 <html>
   <head>
     <!-- ... -->
-    <link rel="stylesheet" href="/bower/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="/bower/bootstrap-datepicker/css/datepicker3.css" />
+    <link rel="stylesheet" href="/bower/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/bower/bootstrap-datepicker/css/datepicker3.css">
     <script src="/bower/modernizr/modernizr.js"></script>
   </head>
   <!-- ... -->
