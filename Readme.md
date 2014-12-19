@@ -117,16 +117,6 @@ Here is an example of how to use this add-on for a "birthday" field with Bootstr
 </form>
 ```
 
-This is how it looks when rendered with the add-on:
-
-Browser (unfocused): TODO
-
-Browser (focused): TODO
-
-Mobile Browser (unfocused): TODO
-
-Mobile Browser (focused): TODO
-
 ### Server-side
 
 When parsing a `<form>` request body server-side, you must consider the following two possible scenarios:
