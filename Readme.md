@@ -45,12 +45,12 @@ You must have the following scripts and stylesheets in the `<head>` tag of your 
 You must have the following before the closing `</body>` tag of your HTML layout (please adjust paths accordingly):
 
 ```html
-  <!-- ... -->
-  <script src="/bower/jquery/dist/jquery.js"></script>
-  <script src="/bower/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="/bower/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-  <script src="/bower/moment/moment.js"></script>
-  <script src="/bower/bootstrap-datepicker-mobile/bootstrap-datepicker-mobile.js"></script>
+    <!-- ... -->
+    <script src="/bower/jquery/dist/jquery.js"></script>
+    <script src="/bower/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="/bower/moment/moment.js"></script>
+    <script src="/bower/bootstrap-datepicker-mobile/bootstrap-datepicker-mobile.js"></script>
   </body>
 </html>
 ```
