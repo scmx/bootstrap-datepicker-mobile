@@ -102,6 +102,7 @@ Here is an example of how to use this add-on for a "birthday" field with Bootstr
 ```html
 <form action="/save-birthday" method="POST">
   <div class="form-group">
+    <label class="control-label">Birthday</label>
     <div class="input-group">
 
       <div class="input-group-addon">
