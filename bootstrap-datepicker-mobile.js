@@ -31,28 +31,32 @@
 
       var $input = $(this);
       var val = $input.val();
+      var valMoment;
 
       if (nativeDateFormat.test(val)) {
-        val = moment(val, 'YYYY-MM-DD');
+        valMoment = moment(val, 'YYYY-MM-DD');
       } else if (datepickerDateFormat.test(val)) {
-        val = moment(val, 'MM/DD/YY');
+        valMoment = moment(val, 'MM/DD/YY');
       }
 
-      var isMoment = moment.isMoment(val);
+      var isMoment = moment.isMoment(valMoment);
 
       if (isMobile && Modernizr.inputtypes.date) {
-        if (isMoment) val = val.format('YYYY-MM-DD');
+        if (isMoment) val = valMoment.format('YYYY-MM-DD');
         $input.datepicker('remove');
         $input.val(val);
         $input.attr('type', 'date');
       } else {
-        if (isMoment) val = val.format('MM/DD/YY');
+        if (isMoment) val = valMoment.format('MM/DD/YY');
         $input.attr('type', 'text');
         $input.val(val);
         if (isMobile) {
           $input.datepicker('remove');
         } else {
-          $input.datepicker('update');
+          if (isMoment)
+            $input.datepicker('update', valMoment.toDate());
+          else
+            $input.datepicker();
           if ($input.is(':focus'))
             $input.datepicker('show');
         }
