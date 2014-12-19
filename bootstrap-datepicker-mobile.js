@@ -14,6 +14,9 @@
 
 (function($, Modernizr, window) {
 
+  // Set the default datepicker format
+  $.fn.datepicker.defaults.format = "mm/dd/yy";
+
   // Add support for datepickers globally to use input[type=date]
   var nativeDateFormat = /^\d{4}-\d{2}-\d{2}$/;
   var datepickerDateFormat = /^\d{2}\/\d{2}\/\d{2}$/;

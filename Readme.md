@@ -62,11 +62,11 @@ We recommend that you install into your project using [Bower][bower], but you ca
 ### Bower
 
 1. Install with Bower:
-  
+
   ```bash
   bower install -S bootstrap-datepicker-mobile
   ```
-  
+
 2. Include the script in your HTML layout:
 
   ```html
@@ -92,9 +92,8 @@ We recommend that you install into your project using [Bower][bower], but you ca
 
 To integrate this add-on, simply follow these three rules and [use the example](#example) as a guide:
 
-1. Never use the data attribute of `data-provide="datepicker"` on date inputs.
-2. Always add the class of `date-picker` on date inputs to activate this add-on for the input.
-3. Render dates formatted as `MM/DD/YY` for default `input` values (e.g. `<input value="02/01/99" />`).
+1. Always add the class of `date-picker` on date inputs to activate this add-on for the input.
+2. Render dates formatted as `MM/DD/YY` for default `input` values (e.g. `<input value="02/01/99" />`).
 
 #### Example
 
@@ -184,13 +183,7 @@ What does the add-on consider when rendering datepickers?
 
 ## Tips
 
-If you don't want to include `data-date-format` on all your inputs:
-
-```js
-$.fn.datepicker.defaults.format = "mm/dd/yy";
-```
-
-We also recommend to set the default of `autoclose` to `true`:
+Set the default of `autoclose` to true for a better user experience:
 
 ```js
 $.fn.datepicker.defaults.autoclose = true;
