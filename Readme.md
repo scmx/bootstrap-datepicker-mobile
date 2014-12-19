@@ -80,7 +80,7 @@ We recommend that you install into your project using [Bower][bower], but you ca
 1. Include the script in your HTML layout:
 
   ```html
-  <script src="//cdn.rawgit.com/niftylettuce/bootstrap-datepicker-mobile/master/bootstrap-datepicker-mobile.js"></script>
+  <script src="//cdn.rawgit.com/niftylettuce/bootstrap-datepicker-mobile/58cf04882aa43026aef5b9a51d9152ab613a7f04/bootstrap-datepicker-mobile.js"></script>
   ```
 
 2. See [usage](#usage) below.
