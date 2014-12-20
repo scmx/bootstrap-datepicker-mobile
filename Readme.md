@@ -121,8 +121,8 @@ Here is an example of how to use this add-on for a "birthday" field with Bootstr
 
 When parsing a `<form>` request body server-side, you must consider the following two possible scenarios:
 
-* The value for an input is passed in the "MM/DD/YY" format
 * The value for an input is passed in the "YYYY-MM-DD" format (if native `input[type=date]` is used)
+* The value for an input is passed in the "MM/DD/YY" format
 
 Therefore, you should parse the date using [Moment.js][momentjs] and then store accordingly in your database.
 
@@ -144,7 +144,7 @@ app.post('/save-birthday', function(req, res, next) {
   if (nativeDateFormat.test(birthday))
     birthday = moment(birthday, 'YYYY-MM-DD');
   else if (datepickerDateFormat.test(birthday))
-    birthday = moment(birthday, 'MM-DD-YY');
+    birthday = moment(birthday, 'MM/DD/YY');
   else
     birthday = moment(birthday);
 
@@ -159,6 +159,7 @@ app.post('/save-birthday', function(req, res, next) {
 
 As soon as the script is loaded, it will automatically render the page properly based on:
 
+* If the device is a touch-screen (using Modernizr via `Modernizr.touch`)
 * If the viewport is of a mobile screen width (<= 480px wide\*)
 * If the device has support for `input[type=date]` (using Modernizr via `Modernizr.inputtypes.date`)
 
@@ -166,8 +167,9 @@ As soon as the script is loaded, it will automatically render the page properly 
 
 What does the add-on consider when rendering datepickers?
 
+* It considers if the device is a touch-screen (if so, it removes bootstrap-datepicker)
 * It considers viewport resizing, and when resized it auto-adjusts properly via `$(window).resize` jQuery function.
-* It considers whether the user was focused on an `input` when they resized (and if so, it will show the datepicker).
+* It considers whether the user was focused on an `input` when they resized (and if so, it will show the bootstrap-datepicker).
 * It considers if the device has native support for `input[type=date]`
 * It considers if the device's viewport is (<= 480px) wide (if it is mobile)
 
